@@ -1,0 +1,30 @@
+/*This main is for specific styling. Margin, color, etc*/
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 35px;
+
+}
+.heroHeader {
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.grid2,.grid3,.grid4,.grid5,.grid6,.grid7 {
+    border: 1px solid black;
+    /*https://stackoverflow.com/questions/46475183/adding-shadow-to-border-in-css*/
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 35px;
+}
