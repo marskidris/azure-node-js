@@ -2,14 +2,28 @@
 body {
     margin: 0;
     font-family: "Times New Roman", Times, serif;
+    background: white;
 }
 
-img {
+.heroHeader img {
     width: 100%;
     height: auto;
     border: 1px solid black;
     border-radius: 35px;
-
+}
+.projectBox img {
+    width: 75%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 35px;
+}
+.education img {
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+}
+.education {
+    text-align: center;
 }
 .heroHeader {
     text-align: center;
@@ -18,19 +32,110 @@ h2 {
     font-size: 3rem;
     text-align: center;
 }
-
+p, h2, h4{
+    letter-spacing: 1px;
+    line-height: 2;
+}
 
 .grid2,.grid3,.grid4,.grid5,.grid6,.grid7 {
     border: 1px solid black;
     /*https://stackoverflow.com/questions/46475183/adding-shadow-to-border-in-css*/
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    margin: 15px;
+    margin: 50px;
     padding: 35px;
+    background-color: white;
 }
-.projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+.projectBox {
+    padding: 0px 15px 20px 0px;
+}
+
+
+
+.footer {
+    padding: 10px;
     text-align: center;
+}
+
+/*I asked gemini Google to come up with some css styling for my skills and other attributes,
+couldn't finish in time, was sick in hospital*/
+.skills {
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top of the container */
+    gap: 40px; /* Space between the two divs */
+}
+
+.skills > div { /* Target the direct children of .skills */
+    text-align: center; /* Center the content within each div */
+}
+
+.skills h4 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.skills ul {
+    list-style-type: disc; /* Or another bullet style */
+    padding-left: 0; /* Remove default left padding */
+    margin: 0 auto; /* Center the list itself */
+    display: table; /* Makes the ul behave like a table so margin: 0 auto works */
+}
+
+.skills li {
+    margin-bottom: 5px; /* Space between list items */
+    text-align: left; /* Align text within list items to the left */
+}
+
+.skills li::marker { /* Style the bullets */
+    display: inline-block;
+    text-align: center;
+    width: 1.25em; /* Adjust as needed */
+    margin-right: 0.25em;
+}
+
+/* Optional: Add some border or background to the divs */
+.skills > div {
+    padding: 20px;
+}
+
+/* Optional: Make the list items more compact */
+.skills li {
+    padding: 5px 0; /* Add some vertical padding */
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: start; /* Key: Align items to the start of the grid area */
+    gap: 20px; /* Adjust gap as needed */
+}
+
+.heroHeader {
+    display: flex; /* Use flexbox for alignment within heroHeader */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.heroHeader img {
+    max-width: 100%; /* Make sure image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents a small space below the image */
+    margin-bottom: 10px; /* Space between image and button */
+}
+
+.heroHeader button {
+    /* Style your button as needed */
+}
+
+.aboutMe h2 {
+    margin-top: 0; /* Remove default top margin on h2 */
+}
+
+.aboutMe p {
+    /* Style your p element as needed */
+}
+
+/* Optional: Add some padding to the grid items */
+.grid2 > div {
+    padding: 20px;
 }
