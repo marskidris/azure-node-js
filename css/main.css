@@ -5,7 +5,7 @@ body {
     background: white;
 }
 
-.heroHeader img {
+.heroHeader .heroImg {
     width: 100%;
     height: auto;
     border: 1px solid black;
@@ -52,10 +52,6 @@ p, h2, h4{
 
 
 
-.footer {
-    padding: 10px;
-    text-align: center;
-}
 
 /*I asked gemini Google to come up with some css styling for my skills and other attributes,
 couldn't finish in time, was sick in hospital*/
@@ -123,9 +119,7 @@ couldn't finish in time, was sick in hospital*/
     margin-bottom: 10px; /* Space between image and button */
 }
 
-.heroHeader button {
-    /* Style your button as needed */
-}
+
 
 .aboutMe h2 {
     margin-top: 0; /* Remove default top margin on h2 */
@@ -139,3 +133,121 @@ couldn't finish in time, was sick in hospital*/
 .grid2 > div {
     padding: 20px;
 }
+
+.grid7 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: start; /* Align items to the top of their grid areas */
+}
+
+.certificates {
+    grid-column: 1 / -1; /* Make the h2 span across all columns */
+    text-align: center; /* Center the h2 text */
+    margin-bottom: 20px; /* Space below the h2 */
+}
+
+.projectBox {
+    display: flex;
+    flex-direction: column; /* Stack image and paragraph vertically */
+    align-items: center; /* Center horizontally within each projectBox */
+}
+
+.projectBox img {
+    max-width: 100%; /* Image takes up full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents small space below image */
+    margin-bottom: 10px; /* Space below image */
+    width: 300px; /* set a fixed width for the image */
+}
+
+.projectBox p {
+    text-align: center;
+}
+
+
+
+
+
+
+.grid8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.heroLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px; /* Space above the images */
+    margin-bottom: 15px;
+}
+
+.heroLinks img {
+    width: 45px;
+    height: auto;
+    display: block;
+}
+
+/* Key change: Reduce margin or padding */
+.footer {
+    gap: 10px; /* Adjust this value to control the space between the p and the heroLinks */
+}
+
+/* OR, if you want more fine-grained control: */
+.footer p {
+    margin-bottom: 0px; /* Adjust this value to control space below the p */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) { /* Example breakpoint - adjust as needed */
+.grid2 {
+    grid-template-columns: 1fr; /* One column on mobile */
+    grid-template-areas:
+      "hero"
+      "about"; /* Define grid areas */
+}
+
+.heroHeader {
+    grid-area: hero; /* Place heroHeader in the "hero" area */
+    align-items: center; /* Center horizontally */
+}
+
+.aboutMe {
+    grid-area: about; /* Place aboutMe in the "about" area */
+    text-align: center; /* Center text in aboutMe */
+}
+
+.aboutMe h2 {
+    text-align: center; /* Center the h2 text */
+}
+
+.aboutMe p {
+    text-align: left; /* Or center if you prefer */
+}
+}
+
+
+
